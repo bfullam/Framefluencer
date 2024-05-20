@@ -15,7 +15,7 @@ export default function EcomForm() {
   const [framefluencersSelected, setFramefluencersSelected] = useState(false);
   const { primaryWallet } = useDynamicContext();
 
-  const framefluencers = [ { id: "1", name: "Vitalik" }, { id: "2", name: "Pollack" }, { id: "3", name: "Framefluencer3" } ];
+  const framefluencers = [ { id: "1", name: "Vitalik", followers: "9001" }, { id: "2", name: "Pollack", followers: "420" }, { id: "3", name: "Framefluencer3", followers: "604" } ];
 
   return (
     <>
@@ -130,6 +130,14 @@ export default function EcomForm() {
                 <label htmlFor={account.id}> {account.name}</label>
               </div>
             ))}
+            <button
+              onClick={() => {
+                setFramefluencersSelected(true);
+              }}
+              className="bg-black font-bold text-white text-md rounded-lg p-1 px-2"
+            >
+              Submit
+            </button>
             </>
           )}
           {frameCreated && framefluencersSelected && (
