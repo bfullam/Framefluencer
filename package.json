@@ -14,6 +14,7 @@
     "@farcaster/core": "^0.14.8",
     "@vercel/blob": "^0.22.1",
     "@vercel/postgres": "^0.7.2",
+    "ethers": "^6.12.1",
     "frames.js": "^0.9.3",
     "next": "^14.1.0",
     "react": "^18.2.0",
