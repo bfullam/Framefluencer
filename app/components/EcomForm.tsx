@@ -15,7 +15,15 @@ export default function EcomForm() {
   const [framefluencersSelected, setFramefluencersSelected] = useState(false);
   const { primaryWallet } = useDynamicContext();
 
-  const framefluencers = [ { id: "1", name: "Vitalik", followers: "9001" }, { id: "2", name: "Pollack", followers: "420" }, { id: "3", name: "Framefluencer3", followers: "604" } ];
+  const framefluencers = [ 
+    { id: "1", name: "vitalik.eth", followers: "253,053" },
+    { id: "2", name: "jessepollak", followers: "295,354" },
+    { id: "3", name: "dwr.eth", followers: "301,110" },
+    { id: "4", name: "dcposch.eth", followers: "274,506" },
+    { id: "5", name: "coopahtroopa.eth", followers: "267,769" },
+    { id: "6", name: "mikedemarais.eth", followers: "242,531" },
+    { id: "7", name: "nonlinear.eth", followers: "240,196" },
+   ];
 
   return (
     <>
@@ -127,7 +135,7 @@ export default function EcomForm() {
                   name={account.id}
                   value={account.id}
                 />
-                <label htmlFor={account.id}> {account.name}</label>
+                <label htmlFor={account.id}> {account.name}: {account.followers} followers</label>
               </div>
             ))}
             <button
