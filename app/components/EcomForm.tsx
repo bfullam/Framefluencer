@@ -12,6 +12,10 @@ export default function EcomForm() {
   const inputPriceRef = useRef<HTMLInputElement>(null);
   const [blob, setBlob] = useState<PutBlobResult | null>(null);
   const { primaryWallet } = useDynamicContext();
+
+  // console log all environment variables
+  console.log(process.env);
+
   return (
     <>
       <div className="flex justify-center">
