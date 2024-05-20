@@ -34,6 +34,7 @@ const handleRequest = frames(async (ctx) => {
   // Get frame data from the database
   const {rows} = await sql`SELECT * FROM frames WHERE frameid = ${frameID}`;
   const frameData = rows[0];
+  console.log(frameData);
 
   return {
     image: frameData.imageurl,
