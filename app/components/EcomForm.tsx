@@ -5,7 +5,6 @@ import { type PutBlobResult } from "@vercel/blob";
 import { upload } from "@vercel/blob/client";
 import { useState, useRef } from "react";
 import EcomSVG from "./EcomSVG";
-import ethers from "ethers";
 
 export default function EcomForm() {
   const inputFileRef = useRef<HTMLInputElement>(null);
@@ -53,7 +52,7 @@ export default function EcomForm() {
                         const postData = {
                           imageUrl: blob.url,
                           receivingWallet: inputWalletRef.current.value,
-                          price: ethers.formatEther(inputPriceRef.current.value),
+                          price: inputPriceRef.current.value,
                           ownerWallet: primaryWallet?.address,
                         };
 
@@ -92,7 +91,7 @@ export default function EcomForm() {
                       ></input>
 
                       <div className="text-white pt-3 font-medium">
-                        Set Product Price in ETH
+                        Set Product Price in WEI
                       </div>
                       <input
                         type="text"
