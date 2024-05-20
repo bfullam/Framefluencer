@@ -1,0 +1,33 @@
+{
+  "name": "frame-tutorial",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@dynamic-labs/ethereum": "^1.4.1",
+    "@dynamic-labs/sdk-react-core": "^1.4.1",
+    "@farcaster/core": "^0.14.8",
+    "@vercel/blob": "^0.22.1",
+    "@vercel/postgres": "^0.7.2",
+    "frames.js": "^0.9.3",
+    "next": "^14.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "viem": "^1.21.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18.2.67",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.0.1",
+    "postcss": "^8",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5"
+  },
+  "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
+}
