@@ -13,11 +13,6 @@ export default function EcomForm() {
   const [blob, setBlob] = useState<PutBlobResult | null>(null);
   const { primaryWallet } = useDynamicContext();
 
-  const [result, setResult] = useState<any>(null);
-
-  // console log all environment variables
-  console.log(result);
-
   return (
     <>
       <div className="flex justify-center">
@@ -55,14 +50,13 @@ export default function EcomForm() {
                       ownerWallet: primaryWallet?.address,
                     };
 
-                    const result = await fetch("/api/form/uploadFrame", {
+                    await fetch("/api/form/uploadFrame", {
                       method: "POST",
                       headers: {
                         "Content-Type": "application/json",
                       },
                       body: JSON.stringify(postData),
                     });
-                    setResult(result);
                   }}
                 >
                   <EcomSVG />
