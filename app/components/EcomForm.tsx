@@ -93,16 +93,6 @@ export default function EcomForm() {
                     ref={inputPriceRef}
                     className="focus:outline-none focus:ring-0 rounded"
                   ></input>
-
-                  {/* <div className="text-white pt-3 font-medium">
-                    Set Influencer Revenue Share %
-                  </div>
-                  <input
-                    type="text"
-                    id="influencerRevenueShare"
-                    name="influencerRevenueShare"
-                    className="focus:outline-none focus:ring-0 rounded"
-                  ></input> */}
                     
                   <div className="pt-3">
                     <button
@@ -119,11 +109,11 @@ export default function EcomForm() {
         </div>
       </div>
 
-      {blob && (
+      {/* {blob && (
         <div>
           Blob url: <a href={blob.url}>{blob.url}</a>
         </div>
-      )}
+      )} */}
     </>
   );
 }
