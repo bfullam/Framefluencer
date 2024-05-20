@@ -30,5 +30,7 @@ export default async function Home() {
   const {rows} = await sql`SELECT * FROM frames WHERE frameid = ${frameID}`;
   const frameData = rows[0];
   console.log(frameData);
+
+  console.log('test');
   return <div>Ecommerce Frame</div>;
 }
