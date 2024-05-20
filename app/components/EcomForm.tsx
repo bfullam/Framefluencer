@@ -108,7 +108,7 @@ export default function EcomForm() {
                     id="influencerRevenueShare"
                     name="influencerRevenueShare"
                     className="focus:outline-none focus:ring-0 rounded"
-                  ></input>
+                  ></input> */}
                     
                   <div className="pt-3">
                     <button
@@ -117,7 +117,7 @@ export default function EcomForm() {
                     >
                       Submit
                     </button>
-                  </div> */}
+                  </div>
                 </form>
               </div>
             </div>
