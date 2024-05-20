@@ -13,8 +13,10 @@ export default function EcomForm() {
   const [blob, setBlob] = useState<PutBlobResult | null>(null);
   const { primaryWallet } = useDynamicContext();
 
+  const [result, setResult] = useState<any>(null);
+
   // console log all environment variables
-  console.log(process.env);
+  console.log(result);
 
   return (
     <>
@@ -53,13 +55,14 @@ export default function EcomForm() {
                       ownerWallet: primaryWallet?.address,
                     };
 
-                    await fetch("/api/form/uploadFrame", {
+                    const result = await fetch("/api/form/uploadFrame", {
                       method: "POST",
                       headers: {
                         "Content-Type": "application/json",
                       },
                       body: JSON.stringify(postData),
                     });
+                    setResult(result);
                   }}
                 >
                   <EcomSVG />
@@ -74,7 +77,7 @@ export default function EcomForm() {
                       ref={inputFileRef}
                     />
                   </label>
-                  
+
                   <div className="text-white font-medium pt-3">
                     Set Wallet Address (Receiving )
                   </div>
@@ -97,7 +100,7 @@ export default function EcomForm() {
                     className="focus:outline-none focus:ring-0 rounded"
                   ></input>
 
-                  <div className="text-white pt-3 font-medium">
+                  {/* <div className="text-white pt-3 font-medium">
                     Set Influencer Revenue Share %
                   </div>
                   <input
@@ -114,7 +117,7 @@ export default function EcomForm() {
                     >
                       Submit
                     </button>
-                  </div>
+                  </div> */}
                 </form>
               </div>
             </div>
